@@ -1,14 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+/* font-family: 'Audiowide', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+/* font-family: 'Press Start 2P', cursive; */
+
+/* CONFIGURACION INICIAL DE PAGINAS */
 * {
   margin: 0;
   padding: 0;
+  font-family: "Audiowide", cursive;
 }
 
 body {
-  background-color: rgb(33, 33, 33);
-  color: rgb(255, 255, 255);
+  background-color: #f2ceae;
 }
 
-/* NAVBAR PRINCIPAL  */
+/* EMPIEZA NAVBAR PRINCIPAL  */
 header {
   overflow: hidden;
   position: fixed;
@@ -25,29 +31,73 @@ header {
 
 .personalContainer {
   display: flex;
-  border: 1px solid #0d7377;
+  border: 1px solid #6779db;
   border-radius: 10px;
-  background-color: #14ffec;
+  background-color: #0f6ca6;
   align-items: center;
   flex-direction: row;
 }
 
 .personalContainer > div a {
-  background-color: #323232;
+  background-color: #ebeded;
   margin: 10px;
   padding: 10px;
   text-decoration: none;
-  color: white;
+  color: black;
   border-radius: 10px;
+  border: 1px solid black;
 }
 
 .personalContainer > div:last-child {
   margin-left: auto;
 }
 
+/* TERMINA NAVBAR PRINCIPAL  */
+
+/* EMPIEZA  PAGINA INDEX.HTML*/
 main {
   margin-top: 80px;
 }
+
+#principal-content {
+  width: 55rem;
+  margin: 0 auto;
+  
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  align-items: center;
+}
+
+.grid-item {
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.grid-item h1 {
+  font-size: 4rem;
+  padding-bottom: 30px;
+  font-family: "Press Start 2P", cursive;
+}
+.grid-item h2 {
+  font-size: 2rem;
+}
+
+.grid-item img {
+  border-radius: 1rem;
+}
+
+#final-Content {
+  text-align: center;
+}
+
+/* TERMINA PAGINA INDEX */
+
+/* */
 
 .secondaryContainer {
   display: flex;
@@ -78,9 +128,9 @@ footer {
   color: white;
   width: 100%;
   text-align: center;
-  position: fixed;
+  /* position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 0; */
   padding: 20px;
   height: 50px;
   margin-top: 0;

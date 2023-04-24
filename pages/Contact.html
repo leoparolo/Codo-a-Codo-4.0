@@ -14,44 +14,57 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../css/main.css" />
 
-    <title>Bienvenido! - Vaporcito</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="../Images/vaporcitoLogo.png" />
+
+    <title>¡Contactate con nosotros!</title>
   </head>
   <body>
     <header>
       <!-- Navbar Principal-->
       <div class="personalContainer">
-        <!-- Menu opciones de la plataforma-->
-        <!--IMG PROYECTO-->
-        <!-- TO DO: Arreglar Width formato general-->
         <div>
           <img
-            src="Images/Think.jpg"
+            src="../Images/vaporcitoLogo.png"
             alt="FOTO PROYECTO"
             id="imgProject"
             width="45"
           />
         </div>
-        <div><a href="#">INICIO</a></div>
-        <div><a href="#">BIBLIOTECA</a></div>
-        <div><a href="#">ACERCA DE</a></div>
-        <div><a href="#">CONTACTO</a></div>
+        <div><a href="../index.html">INICIO</a></div>
+        <div><a href="/pages/HowItWorks.html">COMO FUNCIONA</a></div>
+        <div><a href="/pages/AboutUs.html">ACERCA DE</a></div>
+        <div><a href="/pages/Contact.html">CONTACTO</a></div>
         <div><a href="#">Iniciar sesion</a></div>
       </div>
     </header>
     <!-- Contenido principal-->
-    <main class="container">
-      <div class="row justify-content-md-center">
+    <main>
+      <section id="principal-content">
+        <h1 class="text-center">Ponte en contacto con nosotros!</h1>
+        <article class="grid-container">
+          <div class="grid-item">
+            <img
+              id="imgVaporcito"
+              src="../Images/SearchingAnswers.png"
+              alt="IMG PRINCIPAL"
+              width="300"
+            />
+          </div>
+          <div class="grid-item">
+            <p style="font-size: 20px">
+              Si tuviste algún problema con nuestra página, quieres dejarnos
+              comentarios o iluminarnos con tus ideas, puedes utilizar el
+              formulario que se presenta más abajo.
+              <br />
+              Recuerda siempre tener respeto frente a nuestro staff, nosotros
+              solo buscamos lo mejor para nuestros usuarios!
+            </p>
+          </div>
+        </article>
         <div class="col">
-          <h1>Ponte en contacto con nosotros!</h1>
           <!--IMG PROYECTO-->
-          <p>
-            Si tuviste algún problema con nuestra página, quieres dejarnos
-            comentarios o iluminarnos con tus ideas, puedes utilizar el
-            formulario que se presenta más abajo.
-            <br />
-            Recuerda siempre tener respeto frente a nuestro staff, nosotros solo
-            buscamos lo mejor para nuestros usuarios!
-          </p>
+
           <form action="#">
             <div class="border">
               <div class="row">
@@ -161,7 +174,7 @@
             <button type="submit" class="btn btn-primary">Enviar datos</button>
           </form>
         </div>
-      </div>
+      </section>
     </main>
     <!-- Footer-->
     <footer></footer>

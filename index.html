@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css" />
+    <!-- Font Awesome-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>Bienvenido! - Vaporcito</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="Images/vaporcitoLogo.png">
+    <title>¡Bienvenido a Vaporcito!</title>
   </head>
   <body>
     <header>
@@ -21,35 +24,57 @@
         <!-- TO DO: Arreglar Width formato general-->
         <div>
           <img
-            src="Images/Think.jpg"
+            src="Images/vaporcitoLogo.png"
             alt="FOTO PROYECTO"
             id="imgProject"
             width="45"
           />
         </div>
-        <div><a href="#">INICIO</a></div>
-        <div><a href="#">BIBLIOTECA</a></div>
-        <div><a href="#">ACERCA DE</a></div>
-        <div><a href="#">CONTACTO</a></div>
+        <div><a href="index.html">INICIO</a></div>
+        <div><a href="/pages/HowItWorks.html">COMO FUNCIONA</a></div>
+        <div><a href="/pages/AboutUs.html">ACERCA DE</a></div>
+        <div><a href="/pages/Contact.html">CONTACTO</a></div>
         <div><a href="#">Iniciar sesion</a></div>
       </div>
     </header>
 
     <!-- Contenido principal-->
     <main>
-      <h1>Bienvenido a Vaporcito, tu biblioteca de juegos preferida</h1>
-      <img src="#" alt="IMG PRINCIPAL" />
-      <img src="#" alt="GIF LULU" />
-      <p>
-        Con vaporcito, vas a poder visualizar todos tus juegos en una sola
-        plataforma
-      </p>
-      <h2>
-        Toda tu coleccion de juegos <span>EN UN SOLO LUGAR!</span> <br />
-        ¿Que esperas para utilizar vaporcito?
-      </h2>
-
-      <!-- TODO: Imagenes en movimiento Extraidos de la API-->
+      <section id="principal-content">
+        <article class="grid-container">
+          <div class="grid-item">
+            <h1>Vaporcito</h1>
+            <h2>Tu biblioteca de juegos preferida!</h2>
+          </div>
+          <div class="grid-item">
+            <img
+              id="imgVaporcito"
+              src="Images/vaporcitoLogo.png"
+              alt="IMG PRINCIPAL"
+              width="300"
+            />
+          </div>
+        </article>
+        <article class="grid-container">
+          <div class="grid-item">
+            <img src="Images/Platforms.png" alt="" width="300" />
+          </div>
+          <div class="grid-item">
+            <p>
+              Con vaporcito, vas a poder visualizar todos tus juegos en una sola
+              plataforma
+            </p>
+          </div>
+        </article>
+        <article id="final-Content">
+          <h2>
+            Toda tu coleccion de juegos <span>EN UN SOLO LUGAR!</span> <br />
+            ¿Que esperas para utilizar vaporcito?
+          </h2>
+          <!-- TODO: Imagenes en movimiento Extraidos de la API-->
+          <p>FALTA IMAGENES EN MOVIMIENTO CON API</p>
+        </article>
+      </section>
     </main>
     <!-- Footer-->
     <footer>
@@ -62,7 +87,7 @@
       <a href="https://www.instagram.com/" target="_blank"
         ><i class="fa fa-instagram" style="font-size: 24px"></i
       ></a>
-      <p>Derechos reservados Vaporcito 2023</p>
+      <p>FALTA DESARROLLAR Derechos reservados Vaporcito 2023</p>
     </footer>
   </body>
 </html>
