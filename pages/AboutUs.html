@@ -12,7 +12,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!-- Icon -->
-    <link rel="shortcut icon" href="../Images/vaporcitoLogo.png">
+    <link rel="shortcut icon" href="../Images/vaporcitoLogo.png" />
     <title>Acerca de Vaporcito</title>
   </head>
   <body>
@@ -30,12 +30,85 @@
             width="45"
           />
         </div>
-        <div><a href="index.html">INICIO</a></div>
-        <div><a href="/pages/HowItWorks.html">COMO FUNCIONA</a></div>
+        <div><a href="../index.html">INICIO</a></div>
+        <div><a href="/pages/HowItWorks.html">CÓMO FUNCIONA</a></div>
         <div><a href="/pages/AboutUs.html">ACERCA DE</a></div>
         <div><a href="/pages/Contact.html">CONTACTO</a></div>
-        <div><a href="#">Iniciar sesion</a></div>
+        <div><a href="#">INICIAR SESIÓN</a></div>
       </div>
     </header>
+
+    <main>
+      <section id="principal-content-for-other-pages">
+        <h1 class="Titulo">Misión y Visión</h1>
+        <article class="grid-container">
+          <div class="grid-item-100">
+            <div class="tab">
+              <button class="tablinks" onclick="openContent(event, 'Mision')" id="defaultOpen">
+                Misión
+              </button>
+              <button class="tablinks" onclick="openContent(event, 'Vision')">
+                Visión
+              </button>
+            </div>
+
+            <div id="Mision" class="tabcontent">
+              <p>
+                Proporcionarle a los usuarios una manera mas facil y simple de
+                poder disfrutar sus juegos.
+              </p>
+            </div>
+
+            <div id="Vision" class="tabcontent">
+              <p>
+                Entendemos lo tedioso que puede llegar a ser utilizar diferentes
+                bibliotecas virtuales hasta darle al juego que queremos, es por
+                eso que creamos Vaporcito!, para nosotros y para la comunidad.
+                Siempre buscando satisfacer las necesidades de la maravillosa
+                comunidad gamer.
+              </p>
+            </div>
+          </div>
+          <div class="grid-item">
+            <img
+              id="imgLeft"
+              src="../Images/Community.png"
+              alt="Comunidad caminando al futuro"
+              width="300"
+            />
+          </div>
+        </article>
+        <h1 class="Titulo">Ubicación</h1>
+        <article class="grid-container">
+          <div class="grid-item">
+            <p>Vaporcito es un grupo independiente de Argentinos residentes en Buenos Aires unidos a traves de Internet!</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210147.4749664642!2d-58.59811119718882!3d-34.6154303498071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1683468567210!5m2!1ses!2sar" width="300" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p>Este proyecto fue diseñado como parte de nuestra cursada en Codo a Codo 4.0 dictado por Buenos Aires Ciudad</p>
+            <p id="final-Content">Para ir a su pagina principal haz click <a href="https://aulasvirtuales.bue.edu.ar/">AQUI</a></p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <!-- Footer-->
+    <footer>
+      <div class="left">
+        <p>© 2023 Vaporcito Team</p>
+      </div>
+      <div class="right">
+        <a href="https://twitter.com/?lang=es" target="_blank"
+          ><i class="fa fa-twitter"></i
+        ></a>
+        <a href="https://es-la.facebook.com/" target="_blank"
+          ><i class="fa fa-facebook-f"></i
+        ></a>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="fa fa-instagram"></i
+        ></a>
+        <a href="https://github.com/" target="_blank">
+          <i class="fa fa-github"></i
+        ></a>
+      </div>
+    </footer>
   </body>
+  <script src="../js/tab.js"></script>
 </html>

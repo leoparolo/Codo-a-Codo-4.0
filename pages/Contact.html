@@ -13,10 +13,13 @@
     />
     <!-- CSS -->
     <link rel="stylesheet" href="../css/main.css" />
-
+    <!-- Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <!-- Icon -->
     <link rel="shortcut icon" href="../Images/vaporcitoLogo.png" />
-
     <title>¡Contactate con nosotros!</title>
   </head>
   <body>
@@ -32,16 +35,16 @@
           />
         </div>
         <div><a href="../index.html">INICIO</a></div>
-        <div><a href="/pages/HowItWorks.html">COMO FUNCIONA</a></div>
+        <div><a href="/pages/HowItWorks.html">CÓMO FUNCIONA</a></div>
         <div><a href="/pages/AboutUs.html">ACERCA DE</a></div>
         <div><a href="/pages/Contact.html">CONTACTO</a></div>
-        <div><a href="#">Iniciar sesion</a></div>
+        <div><a href="#">INICIAR SESIÓN</a></div>
       </div>
     </header>
     <!-- Contenido principal-->
     <main>
-      <section id="principal-content">
-        <h1 class="text-center">Ponte en contacto con nosotros!</h1>
+      <section id="principal-content-for-other-pages">
+        <h1 class="text-center m-0 p-3">¡Ponte en contacto con nosotros!</h1>
         <article class="grid-container">
           <div class="grid-item">
             <img
@@ -52,7 +55,7 @@
             />
           </div>
           <div class="grid-item">
-            <p style="font-size: 20px">
+            <p>
               Si tuviste algún problema con nuestra página, quieres dejarnos
               comentarios o iluminarnos con tus ideas, puedes utilizar el
               formulario que se presenta más abajo.
@@ -65,31 +68,31 @@
         <div class="col">
           <!--IMG PROYECTO-->
 
+          <form></form>
+
           <form action="#">
-            <div class="border">
-              <div class="row">
-                <div class="col">
-                  <!-- Ingreso del nombre-->
-                  <label for="nombre">Nombre: </label>
-                  <input
-                    class="form-control"
-                    size="30"
-                    type="text"
-                    name="nombre"
-                    placeholder="Pedro"
-                  />
-                </div>
-                <div class="col">
-                  <!-- Ingreso del apellido -->
-                  <label for="apellido">Apellido: </label>
-                  <input
-                    class="form-control"
-                    size="30"
-                    type="text"
-                    name="apellido"
-                    placeholder="Pascal"
-                  />
-                </div>
+            <div>
+              <div class="form-group">
+                <!-- Ingreso del nombre-->
+                <label for="nombre">Nombre: </label>
+                <input
+                  class="form-control"
+                  size="30"
+                  type="text"
+                  name="nombre"
+                  placeholder="Pedro"
+                />
+              </div>
+              <div class="form-group">
+                <!-- Ingreso del apellido -->
+                <label for="apellido">Apellido: </label>
+                <input
+                  class="form-control"
+                  size="30"
+                  type="text"
+                  name="apellido"
+                  placeholder="Pascal"
+                />
               </div>
               <div class="form-group">
                 <!-- Ingreso Fecha de nacimiento -->
@@ -121,9 +124,10 @@
                 >
               </div>
             </div>
-            <div class="form-row align-items-center">
+            <hr />
+            <div class="form-group">
               <!-- Seleccion del tipo de formulario -->
-              <div class="col-auto my-1">
+              <div class="my-3">
                 <legend class="mr-sm-2">¿En que podemos ayudarte?</legend>
                 <select
                   class="custom-select mr-sm-2"
@@ -133,26 +137,34 @@
                   <option selected>Seleccione una opcion</option>
                   <option value="01">Problema tecnico</option>
                   <option value="02">Comentario</option>
-                  <option value="03">Tengo una idea!</option>
+                  <option value="03">¡Tengo una idea!</option>
                 </select>
               </div>
             </div>
             <div class="form-group">
               <!-- Ingreso de un archivo-->
-              <label for="foto"
-                >No sabes explicarnos el problema? No te hagas problema!
-                Envianos una foto con una pequeña descripcion para tener mas
-                alcance a darte una solución.</label
-              >
-              <input class="form-control-file" type="file" name="foto" />
-              <label for="descripcion">Descripcion de la imagen:</label>
-              <textarea
-                name="descripcion"
-                id="descripcion"
-                cols="40"
-                rows="3"
-                placeholder="Aqui yace los restos de una criatura que fue bella sin vanidad, fuerte sin insolencia, valiente sin ferocidad... "
-              ></textarea>
+              <label for="foto">
+                Si piensas que una descripcion no es suficiente, mandanos una
+                captura con una breve descripción
+              </label>
+
+              <div class="d-flex align-items-center justify-content-center">
+                <input
+                  class="form-control-file w-75 p-3"
+                  type="file"
+                  name="foto"
+                />
+                <label class="m-0" for="descripcion"
+                  >Descripcion de la imagen:</label
+                >
+                <textarea
+                  name="descripcion"
+                  id="descripcion"
+                  cols="40"
+                  rows="3"
+                  placeholder="Aqui yace los restos de una criatura que fue bella sin vanidad, fuerte sin insolencia, valiente sin ferocidad... "
+                ></textarea>
+              </div>
             </div>
             <div class="form-group">
               <!-- Comentario -->
@@ -161,6 +173,7 @@
                 contacto a la brevedad a traves de tu email:</label
               ><br />
               <textarea
+                class="w-100"
                 name="comentario"
                 id="comentario"
                 cols="40"
@@ -168,15 +181,31 @@
               ></textarea>
             </div>
             <!-- Botones para controlar el formulario -->
-            <button type="reset" class="btn btn-primary">
-              Borrar formulario
-            </button>
-            <button type="submit" class="btn btn-primary">Enviar datos</button>
+            <button type="reset" class="btnForm">Borrar formulario</button>
+            <button type="submit" class="btnForm">Enviar datos</button>
           </form>
         </div>
       </section>
     </main>
     <!-- Footer-->
-    <footer></footer>
+    <footer>
+      <div class="left">
+        <p>© 2023 Vaporcito Team</p>
+      </div>
+      <div class="right">
+        <a href="https://twitter.com/?lang=es" target="_blank"
+          ><i class="fa fa-twitter"></i
+        ></a>
+        <a href="https://es-la.facebook.com/" target="_blank"
+          ><i class="fa fa-facebook-f"></i
+        ></a>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="fa fa-instagram"></i
+        ></a>
+        <a href="https://github.com/" target="_blank">
+          <i class="fa fa-github"></i
+        ></a>
+      </div>
+    </footer>
   </body>
 </html>
