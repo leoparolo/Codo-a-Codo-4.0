@@ -13,6 +13,8 @@
     />
     <!-- Icon -->
     <link rel="shortcut icon" href="../Images/vaporcitoLogo.png" />
+    <!-- Libreria SweetAlert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Acerca de Vaporcito</title>
   </head>
   <body>
@@ -34,7 +36,11 @@
         <div><a href="/pages/HowItWorks.html">CÓMO FUNCIONA</a></div>
         <div><a href="/pages/AboutUs.html">ACERCA DE</a></div>
         <div><a href="/pages/Contact.html">CONTACTO</a></div>
-        <div><a href="#">INICIAR SESIÓN</a></div>
+        <div>
+          <a onclick="document.getElementById('login').style.display='block'"
+            >INICIAR SESIÓN</a
+          >
+        </div>
       </div>
     </header>
 
@@ -44,7 +50,11 @@
         <article class="grid-container">
           <div class="grid-item-100">
             <div class="tab">
-              <button class="tablinks" onclick="openContent(event, 'Mision')" id="defaultOpen">
+              <button
+                class="tablinks"
+                onclick="openContent(event, 'Mision')"
+                id="defaultOpen"
+              >
                 Misión
               </button>
               <button class="tablinks" onclick="openContent(event, 'Vision')">
@@ -81,13 +91,80 @@
         <h1 class="Titulo">Ubicación</h1>
         <article class="grid-container">
           <div class="grid-item">
-            <p>Vaporcito es un grupo independiente de Argentinos residentes en Buenos Aires unidos a traves de Internet!</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210147.4749664642!2d-58.59811119718882!3d-34.6154303498071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1683468567210!5m2!1ses!2sar" width="300" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <p>Este proyecto fue diseñado como parte de nuestra cursada en Codo a Codo 4.0 dictado por Buenos Aires Ciudad</p>
-            <p id="final-Content">Para ir a su pagina principal haz click <a href="https://aulasvirtuales.bue.edu.ar/">AQUI</a></p>
+            <p>
+              Vaporcito es un grupo independiente de Argentinos residentes en
+              Buenos Aires unidos a traves de Internet!
+            </p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210147.4749664642!2d-58.59811119718882!3d-34.6154303498071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1683468567210!5m2!1ses!2sar"
+              width="300"
+              height="350"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <p>
+              Este proyecto fue diseñado como parte de nuestra cursada en Codo a
+              Codo 4.0 dictado por Buenos Aires Ciudad
+            </p>
+            <p id="final-Content">
+              Para ir a su pagina principal haz click
+              <a href="https://aulasvirtuales.bue.edu.ar/">AQUI</a>
+            </p>
           </div>
         </article>
       </section>
+
+      <!-- LOGIN -->
+
+      <div id="login" class="modal">
+        <form class="modal-content animate" method="post" id="formLogin">
+          <div class="imgcontainer">
+            <img
+              src="../Images/vaporcitoLogo.png"
+              alt="Avatar"
+              class="avatar"
+            />
+          </div>
+
+          <div class="container">
+            <label for="uname"><b>Usuario</b></label>
+            <input
+              type="text"
+              placeholder="Ingrese su usuario"
+              name="uname"
+              required
+            />
+
+            <label for="psw"><b>Contraseña</b></label>
+            <input
+              type="password"
+              placeholder="Ingrese su contraseña"
+              name="psw"
+              required
+            />
+
+            <button type="submit" class="btnLogin">Acceder</button>
+            <label> <input type="checkbox" name="remember" /> Recordame </label>
+          </div>
+
+          <div class="container" style="background-color: #f1f1f1">
+            <button
+              type="button"
+              onclick="document.getElementById('login').style.display='none'"
+              class="cancelbtn"
+            >
+              Salir
+            </button>
+            <span class="psw"
+              ><a href="#" onclick="handleSubmit()"
+                >Recuperar contraseña</a
+              ></span
+            >
+          </div>
+        </form>
+      </div>
     </main>
     <!-- Footer-->
     <footer>
@@ -111,4 +188,5 @@
     </footer>
   </body>
   <script src="../js/tab.js"></script>
+  <script src="../js/login.js"></script>
 </html>

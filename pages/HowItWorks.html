@@ -13,6 +13,8 @@
     />
     <!-- Icon -->
     <link rel="shortcut icon" href="../Images/vaporcitoLogo.png" />
+    <!-- Libreria SweetAlert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>¿Como funciona Vaporcito?</title>
   </head>
   <body>
@@ -31,7 +33,11 @@
         <div><a href="/pages/HowItWorks.html">CÓMO FUNCIONA</a></div>
         <div><a href="/pages/AboutUs.html">ACERCA DE</a></div>
         <div><a href="/pages/Contact.html">CONTACTO</a></div>
-        <div><a href="#">INICIAR SESIÓN</a></div>
+        <div>
+          <a onclick="document.getElementById('login').style.display='block'"
+            >INICIAR SESIÓN</a
+          >
+        </div>
       </div>
     </header>
     <main>
@@ -66,15 +72,65 @@
             />El servicio también permite la gestión de descargas y
             actualizaciones de juegos, lo que significa que el usuario no tiene
             que preocuparse por estar revisando diferentes plataformas para
-            descargar y actualizar sus juegos. <br> En resumen, este servicio de
-            conectividad de bibliotecas de juegos es una solución muy
-            conveniente para aquellos usuarios que tienen juegos en diferentes
-            plataformas, ya que les permite acceder a todos ellos desde una sola
-            página, con un sistema de organización y filtrado que facilita su
-            gestión.
+            descargar y actualizar sus juegos. <br />
+            En resumen, este servicio de conectividad de bibliotecas de juegos
+            es una solución muy conveniente para aquellos usuarios que tienen
+            juegos en diferentes plataformas, ya que les permite acceder a todos
+            ellos desde una sola página, con un sistema de organización y
+            filtrado que facilita su gestión.
           </p>
         </section>
       </article>
+
+      <!-- LOGIN -->
+
+      <div id="login" class="modal">
+        <form class="modal-content animate" method="post" id="formLogin">
+          <div class="imgcontainer">
+            <img
+              src="../Images/vaporcitoLogo.png"
+              alt="Avatar"
+              class="avatar"
+            />
+          </div>
+
+          <div class="container">
+            <label for="uname"><b>Usuario</b></label>
+            <input
+              type="text"
+              placeholder="Ingrese su usuario"
+              name="uname"
+              required
+            />
+
+            <label for="psw"><b>Contraseña</b></label>
+            <input
+              type="password"
+              placeholder="Ingrese su contraseña"
+              name="psw"
+              required
+            />
+
+            <button type="submit" class="btnLogin">Acceder</button>
+            <label> <input type="checkbox" name="remember" /> Recordame </label>
+          </div>
+
+          <div class="container" style="background-color: #f1f1f1">
+            <button
+              type="button"
+              onclick="document.getElementById('login').style.display='none'"
+              class="cancelbtn"
+            >
+              Salir
+            </button>
+            <span class="psw"
+              ><a href="#" onclick="handleSubmit()"
+                >Recuperar contraseña</a
+              ></span
+            >
+          </div>
+        </form>
+      </div>
     </main>
     <!-- Footer-->
     <footer>
@@ -97,4 +153,5 @@
       </div>
     </footer>
   </body>
+  <script src="../js/login.js"></script>
 </html>

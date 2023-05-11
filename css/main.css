@@ -23,7 +23,7 @@ p {
 }
 
 hr {
-  background-color:black;
+  background-color: black;
 }
 
 footer {
@@ -32,7 +32,7 @@ footer {
   align-items: center;
   padding: 20px;
   background-color: black;
-  color:white;
+  color: white;
 }
 .left {
   flex: 1;
@@ -93,6 +93,7 @@ header {
   color: black;
   border-radius: 10px;
   border: 1px solid black;
+  cursor: pointer;
 }
 
 .personalContainer > div:last-child {
@@ -102,7 +103,6 @@ header {
 /* TERMINA NAVBAR PRINCIPAL  */
 
 /* EMPIEZA  PAGINA INDEX.HTML*/
-
 
 #principal-content {
   width: 55rem;
@@ -137,6 +137,53 @@ header {
 
 #final-Content {
   text-align: center;
+}
+
+.slider-frame {
+  width: 600px;
+  height: auto;
+  margin: 10px auto 0;
+  overflow: hidden;
+}
+
+.slider-frame ul {
+  display: flex;
+  padding: 0;
+  width: 300%;
+
+  animation: slide 10s infinite ease-in-out;
+}
+
+.slider-frame li {
+  list-style: none;
+  width: 100%;
+}
+
+.slider-frame img {
+  width: 100%;
+}
+
+@keyframes slide {
+  0% {
+    margin-left: 0%;
+  }
+  20% {
+    margin-left: 0%;
+  }
+
+  25% {
+    margin-left: -100%;
+  }
+  45% {
+    margin-left: -100%;
+  }
+
+  50% {
+    margin-left: -200%;
+  }
+  70% {
+    margin-left: -200%;
+  }
 }
 
 /* TERMINA PAGINA INDEX */
@@ -192,8 +239,6 @@ header {
   margin-left: auto;
   color: black;
 }
-
-
 
 /* EMPIEZA PAGINA AboutUs.html */
 
@@ -254,18 +299,26 @@ header {
   border: 1px solid black;
 }
 
+input {
+  color: black;
+}
+
 /* TERMINA PAGINA Contact.html */
 
 /* */
 /* EMPIEZA PAGINA HowItWorks.html */
 #imgLeft {
-  float:left;
-  padding: 10px;
+  float: left;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 
 #imgRight {
   float: right;
-  padding:10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 
 #Parrafo {
@@ -273,3 +326,111 @@ header {
   line-height: 1.8rem;
 }
 
+/* */
+/* LOGIN */
+/* Full-width input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+.btnLogin {
+  background-color: #ebeded;
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 17px;
+}
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 2% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+  font-size: 17px;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}

@@ -12,7 +12,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!-- Icon -->
-    <link rel="shortcut icon" href="Images/vaporcitoLogo.png">
+    <link rel="shortcut icon" href="Images/vaporcitoLogo.png" />
+    <!-- Libreria SweetAlert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>¡Bienvenido a Vaporcito!</title>
   </head>
   <body>
@@ -34,7 +36,11 @@
         <div><a href="/pages/HowItWorks.html">CÓMO FUNCIONA</a></div>
         <div><a href="/pages/AboutUs.html">ACERCA DE</a></div>
         <div><a href="/pages/Contact.html">CONTACTO</a></div>
-        <div><a href="#">INICIAR SESIÓN</a></div>
+        <div>
+          <a onclick="document.getElementById('login').style.display='block'"
+            >INICIAR SESIÓN</a
+          >
+        </div>
       </div>
     </header>
 
@@ -68,13 +74,77 @@
         </article>
         <article id="final-Content">
           <h2>
-            Toda tu coleccion de juegos <span>EN UN SOLO LUGAR!</span> <br />
+            Toda tu coleccion de juegos <u>EN UN SOLO LUGAR!</u> <br />
             ¿Que esperas para utilizar vaporcito?
           </h2>
           <!-- TODO: Imagenes en movimiento Extraidos de la API-->
-          <p>FALTA IMAGENES EN MOVIMIENTO CON API</p>
+          <div class="slider-frame">
+            <ul>
+              <li>
+                <img
+                  src="Images/pruebas/pexels-ozan-çulha-15637507.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img
+                  src="Images/pruebas/pexels-yusron-el-jihan-13074004.jpg"
+                  alt=""
+                />
+              </li>
+              <li>
+                <img src="Images/pruebas/pexels-ánh-đặng-16392175.jpg" alt="" />
+              </li>
+            </ul>
+          </div>
         </article>
       </section>
+
+      <!-- LOGIN -->
+
+      <div id="login" class="modal">
+        <form class="modal-content animate" method="post" id="formLogin">
+          <div class="imgcontainer">
+            <img src="Images/vaporcitoLogo.png" alt="Avatar" class="avatar" />
+          </div>
+
+          <div class="container">
+            <label for="uname"><b>Usuario</b></label>
+            <input
+              type="text"
+              placeholder="Ingrese su usuario"
+              name="uname"
+              required
+            />
+
+            <label for="psw"><b>Contraseña</b></label>
+            <input
+              type="password"
+              placeholder="Ingrese su contraseña"
+              name="psw"
+              required
+            />
+
+            <button type="submit" class="btnLogin">Acceder</button>
+            <label> <input type="checkbox" name="remember" /> Recordame </label>
+          </div>
+
+          <div class="container" style="background-color: #f1f1f1">
+            <button
+              type="button"
+              onclick="document.getElementById('login').style.display='none'"
+              class="cancelbtn"
+            >
+              Salir
+            </button>
+            <span class="psw"
+              ><a href="#" onclick="handleSubmit()"
+                >Recuperar contraseña</a
+              ></span
+            >
+          </div>
+        </form>
+      </div>
     </main>
     <!-- Footer-->
     <footer>
@@ -97,4 +167,5 @@
       </div>
     </footer>
   </body>
+  <script src="js/login.js"></script>
 </html>

@@ -20,6 +20,9 @@
     />
     <!-- Icon -->
     <link rel="shortcut icon" href="../Images/vaporcitoLogo.png" />
+    <!-- Libreria SweetAlert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <title>¡Contactate con nosotros!</title>
   </head>
   <body>
@@ -38,7 +41,11 @@
         <div><a href="/pages/HowItWorks.html">CÓMO FUNCIONA</a></div>
         <div><a href="/pages/AboutUs.html">ACERCA DE</a></div>
         <div><a href="/pages/Contact.html">CONTACTO</a></div>
-        <div><a href="#">INICIAR SESIÓN</a></div>
+        <div>
+          <a onclick="document.getElementById('login').style.display='block'"
+            >INICIAR SESIÓN</a
+          >
+        </div>
       </div>
     </header>
     <!-- Contenido principal-->
@@ -68,9 +75,11 @@
         <div class="col">
           <!--IMG PROYECTO-->
 
-          <form></form>
-
-          <form action="#">
+          <form
+            action="https://formspree.io/f/xnqyrnrn"
+            method="post"
+            id="form"
+          >
             <div>
               <div class="form-group">
                 <!-- Ingreso del nombre-->
@@ -81,6 +90,8 @@
                   type="text"
                   name="nombre"
                   placeholder="Pedro"
+                  required
+                  id="nombre"
                 />
               </div>
               <div class="form-group">
@@ -92,12 +103,18 @@
                   type="text"
                   name="apellido"
                   placeholder="Pascal"
+                  id="apellido"
                 />
               </div>
               <div class="form-group">
                 <!-- Ingreso Fecha de nacimiento -->
                 <label for="fecha">Fecha de nacimiento: </label>
-                <input class="form-control" type="date" name="fecha" />
+                <input
+                  class="form-control"
+                  type="date"
+                  name="fechaNacimiento"
+                  id="fecha"
+                />
               </div>
               <div class="form-group">
                 <!-- Ingreso de la dirección de correo-->
@@ -107,6 +124,7 @@
                   type="email"
                   name="email"
                   placeholder="ppascal@gmail.com"
+                  id="email"
                 />
               </div>
               <div class="form-check">
@@ -115,9 +133,9 @@
                 <input
                   class="form-check-input"
                   type="checkbox"
-                  name="Anonymus"
+                  name="checkbox"
                   value="Anonimo"
-                  id="00"
+                  id="checkbox"
                 />
                 <label class="form-check-label" for="00"
                   >Prefiero no decirlo</label
@@ -128,16 +146,19 @@
             <div class="form-group">
               <!-- Seleccion del tipo de formulario -->
               <div class="my-3">
-                <legend class="mr-sm-2">¿En que podemos ayudarte?</legend>
+                <legend class="mr-sm-2 text-center">
+                  ¿En que podemos ayudarte?
+                </legend>
                 <select
                   class="custom-select mr-sm-2"
-                  name=""
+                  name="opcion"
                   id="inlineFormCustomSelect"
+                  required
                 >
                   <option selected>Seleccione una opcion</option>
-                  <option value="01">Problema tecnico</option>
-                  <option value="02">Comentario</option>
-                  <option value="03">¡Tengo una idea!</option>
+                  <option value="Problema tecnico">Problema tecnico</option>
+                  <option value="Comentario">Comentario</option>
+                  <option value="¡Tengo una idea!">¡Tengo una idea!</option>
                 </select>
               </div>
             </div>
@@ -145,24 +166,24 @@
               <!-- Ingreso de un archivo-->
               <label for="foto">
                 Si piensas que una descripcion no es suficiente, mandanos una
-                captura con una breve descripción
+                captura con una breve descripción (Proximamente...)
               </label>
 
               <div class="d-flex align-items-center justify-content-center">
                 <input
                   class="form-control-file w-75 p-3"
                   type="file"
-                  name="foto"
+                  disabled
                 />
                 <label class="m-0" for="descripcion"
                   >Descripcion de la imagen:</label
                 >
                 <textarea
-                  name="descripcion"
                   id="descripcion"
                   cols="40"
                   rows="3"
                   placeholder="Aqui yace los restos de una criatura que fue bella sin vanidad, fuerte sin insolencia, valiente sin ferocidad... "
+                  disabled
                 ></textarea>
               </div>
             </div>
@@ -178,14 +199,65 @@
                 id="comentario"
                 cols="40"
                 rows="3"
+                required
               ></textarea>
             </div>
             <!-- Botones para controlar el formulario -->
-            <button type="reset" class="btnForm">Borrar formulario</button>
             <button type="submit" class="btnForm">Enviar datos</button>
+            <button type="reset" class="btnForm">Borrar datos</button>
           </form>
         </div>
       </section>
+
+      <!-- LOGIN -->
+
+      <div id="login" class="modal">
+        <form class="modal-content animate" method="post" id="formLogin">
+          <div class="imgcontainer">
+            <img
+              src="../Images/vaporcitoLogo.png"
+              alt="Avatar"
+              class="avatar"
+            />
+          </div>
+
+          <div class="container">
+            <label for="uname"><b>Usuario</b></label>
+            <input
+              type="text"
+              placeholder="Ingrese su usuario"
+              name="uname"
+              required
+            />
+
+            <label for="psw"><b>Contraseña</b></label>
+            <input
+              type="password"
+              placeholder="Ingrese su contraseña"
+              name="psw"
+              required
+            />
+
+            <button type="submit" class="btnLogin">Acceder</button>
+            <label> <input type="checkbox" name="remember" /> Recordame </label>
+          </div>
+
+          <div class="container" style="background-color: #f1f1f1">
+            <button
+              type="button"
+              onclick="document.getElementById('login').style.display='none'"
+              class="cancelbtn"
+            >
+              Salir
+            </button>
+            <span class="psw"
+              ><a href="#" onclick="handleSubmit()"
+                >Recuperar contraseña</a
+              ></span
+            >
+          </div>
+        </form>
+      </div>
     </main>
     <!-- Footer-->
     <footer>
@@ -208,4 +280,8 @@
       </div>
     </footer>
   </body>
+
+  <!-- JS-->
+  <script src="../js/form.js"></script>
+  <script src="../js/login.js"></script>
 </html>
