@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/mediaquery.css" />
     <!-- Font Awesome-->
     <link
       rel="stylesheet"
@@ -17,31 +18,34 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>¡Bienvenido a Vaporcito!</title>
   </head>
+
   <body>
     <header>
       <!-- Navbar Principal-->
-      <div class="personalContainer">
-        <!-- Menu opciones de la plataforma-->
-        <!--IMG PROYECTO-->
-        <!-- TO DO: Arreglar Width formato general-->
-        <div>
-          <img
-            src="Images/vaporcitoLogo.png"
-            alt="FOTO PROYECTO"
-            id="imgProject"
-            width="45"
-          />
-        </div>
-        <div><a href="index.html">INICIO</a></div>
-        <div><a href="/pages/HowItWorks.html">CÓMO FUNCIONA</a></div>
-        <div><a href="/pages/AboutUs.html">ACERCA DE</a></div>
-        <div><a href="/pages/Contact.html">CONTACTO</a></div>
-        <div>
-          <a onclick="document.getElementById('login').style.display='block'"
-            >INICIAR SESIÓN</a
-          >
-        </div>
-      </div>
+      <!-- Menu opciones de la plataforma-->
+      <img
+        src="Images/vaporcitoLogo.png"
+        alt="Imagen principal en miniatura"
+        id="miniImgProject"
+        width="45"
+      />
+      <h1>Vaporcito</h1>
+
+      <input type="checkbox" id="menu-check" />
+      <label for="menu-check" id="menu">
+        <span id="menu-abrir">&#9776;</span>
+        <span id="menu-cerrar">X</span>
+      </label>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="/pages/HowItWorks.html">CÓMO FUNCIONA</a></li>
+          <li><a href="/pages/AboutUs.html">ACERCA DE</a></li>
+          <li><a href="/pages/Contact.html">CONTACTO</a></li>
+          <li id="last"><a id="showLogin">INICIAR SESIÓN</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Contenido principal-->
@@ -63,7 +67,7 @@
         </article>
         <article class="grid-container">
           <div class="grid-item">
-            <img src="Images/Platforms.png" alt="" width="300" />
+            <img src="Images/Platforms.png" alt="" width="300" id="altimg" />
           </div>
           <div class="grid-item">
             <p>
@@ -81,19 +85,19 @@
           <div class="slider-frame">
             <ul>
               <li>
-                <img
-                  src="Images/pruebas/pexels-ozan-çulha-15637507.jpg"
-                  alt=""
-                />
+                <img alt="RAWG Api Image" id="00" width="330" height="300" />
               </li>
               <li>
-                <img
-                  src="Images/pruebas/pexels-yusron-el-jihan-13074004.jpg"
-                  alt=""
-                />
+                <img alt="RAWG Api Image" id="01" width="330" height="300" />
               </li>
               <li>
-                <img src="Images/pruebas/pexels-ánh-đặng-16392175.jpg" alt="" />
+                <img alt="RAWG Api Image" id="02" width="330" height="300" />
+              </li>
+              <li>
+                <img alt="RAWG Api Image" id="03" width="330" height="300" />
+              </li>
+              <li>
+                <img alt="RAWG Api Image" id="04" width="330" height="300" />
               </li>
             </ul>
           </div>
@@ -168,4 +172,5 @@
     </footer>
   </body>
   <script src="js/login.js"></script>
+  <script src="js/index.js"></script>
 </html>

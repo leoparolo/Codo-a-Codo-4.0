@@ -20,28 +20,34 @@
   <body>
     <header>
       <!-- Navbar Principal-->
-      <div class="personalContainer">
-        <!-- Menu opciones de la plataforma-->
-        <!--IMG PROYECTO-->
-        <!-- TO DO: Arreglar Width formato general-->
-        <div>
-          <img
-            src="../Images/vaporcitoLogo.png"
-            alt="FOTO PROYECTO"
-            id="imgProject"
-            width="45"
-          />
-        </div>
-        <div><a href="../index.html">INICIO</a></div>
-        <div><a href="/pages/HowItWorks.html">CÓMO FUNCIONA</a></div>
-        <div><a href="/pages/AboutUs.html">ACERCA DE</a></div>
-        <div><a href="/pages/Contact.html">CONTACTO</a></div>
-        <div>
-          <a onclick="document.getElementById('login').style.display='block'"
-            >INICIAR SESIÓN</a
-          >
-        </div>
-      </div>
+      <!-- Menu opciones de la plataforma-->
+      <img
+        src="Images/vaporcitoLogo.png"
+        alt="Imagen principal en miniatura"
+        id="miniImgProject"
+        width="45"
+      />
+      <h1>Vaporcito</h1>
+
+      <input type="checkbox" id="menu-check" />
+      <label for="menu-check" id="menu">
+        <span id="menu-abrir">&#9776;</span>
+        <span id="menu-cerrar">X</span>
+      </label>
+
+      <nav>
+        <ul>
+          <li><a href="../index.html">INICIO</a></li>
+          <li><a href="/pages/HowItWorks.html">CÓMO FUNCIONA</a></li>
+          <li><a href="/pages/AboutUs.html">ACERCA DE</a></li>
+          <li><a href="/pages/Contact.html">CONTACTO</a></li>
+          <li id="last">
+            <a onclick="document.getElementById('login').style.display='block'"
+              >INICIAR SESIÓN</a
+            >
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main>

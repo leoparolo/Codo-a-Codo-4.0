@@ -1,0 +1,416 @@
+@media only screen and (max-width: 2560px) {
+  * {
+    max-width: 2560px;
+  }
+  body {
+    width: 2560px;
+  }
+
+  header {
+    width: 2560px;
+    height: 140px;
+  }
+  header.hscroll {
+    height: 100px;
+  }
+  main {
+    margin: 141px 0 10px 0;
+  }
+  li a {
+    font-size: 20px;
+  }
+  #principal-content {
+    width: 120rem;
+  }
+
+  .grid-item h1 {
+    font-size: 4em;
+  }
+  .grid-item h2 {
+    font-size: 2.5em;
+  }
+  .grid-item img {
+    width: 700px;
+  }
+  p {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 4.3em;
+  }
+  .right i {
+    font-size: 2.4em;
+  }
+
+  .slider-frame {
+    width: 1920px;
+  }
+
+  .slider-frame ul {
+    width: 500%;
+    height: 870px;
+    overflow: visible;
+  }
+
+  .slider-frame li {
+    width: 100%;
+  }
+
+  .slider-frame img {
+    width: 1920px;
+    height: 870px;
+  }
+
+  @keyframes slide {
+    0% {
+      margin-left: 0%;
+    }
+    25% {
+      margin-left: -1930px;
+    }
+    45% {
+      margin-left: -3860px;
+    }
+    65% {
+      margin-left: -5790px;
+    }
+    85% {
+      margin-left: -7720px;
+    }
+  }
+
+  .modal-content {
+    width: 80%;
+  }
+  b {
+    font-size: 3em;
+    justify-content: center;
+  }
+  .container label {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    font-size: 40px;
+  }
+
+  .btnLogin {
+    font-size: 3em;
+  }
+  p {
+    font-size: 1.4em;
+  }
+  .right i {
+    font-size: 1.7em;
+  }
+}
+/* */
+@media only screen and (max-width: 1024px) {
+  * {
+    max-width: 1024px;
+  }
+  body {
+    width: 1024px;
+  }
+
+  header {
+    width: 1024px;
+    height: 100px;
+  }
+  header.hscroll {
+    height: 70px;
+  }
+
+  li a {
+    font-size: 16px;
+  }
+  main {
+    margin: 101px 0 10px 0;
+  }
+  #principal-content {
+    width: 80%;
+  }
+  .grid-item h1 {
+    font-size: 1.2em;
+  }
+  .grid-item h2 {
+    font-size: 1em;
+  }
+  .grid-item img {
+    width: 300px;
+  }
+  p {
+    font-size: 0.8em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  .slider-frame {
+    width: 812px;
+  }
+  .slider-frame ul {
+    width: 500%;
+    height: 460px;
+    overflow: visible;
+  }
+  .slider-frame li {
+    width: 100%;
+  }
+
+  .slider-frame img {
+    width: 812px;
+    height: 460px;
+  }
+
+  @keyframes slide {
+    0% {
+      margin-left: 0%;
+    }
+    25% {
+      margin-left: -822px;
+    }
+    45% {
+      margin-left: -1654px;
+    }
+    65% {
+      margin-left: -2486px;
+    }
+    85% {
+      margin-left: -3308px;
+    }
+  }
+  p {
+    font-size: 1em;
+  }
+  .right i {
+    font-size: 1.7em;
+  }
+  .modal-content {
+    margin: 3% auto 7% auto;
+    width: 50%;
+  }
+  img.avatar {
+    width: 20%;
+  }
+  b {
+    font-size: 1.6em;
+  }
+  input[type="text"],
+  input[type="password"] {
+    font-size: 20px;
+  }
+  .btnLogin {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  * {
+    max-width: 375px;
+    max-height: 1576px;
+  }
+  body {
+    width: 375px;
+  }
+  #miniImgProject {
+    display: inline;
+    border: 1px solid black;
+    border-radius: 32px;
+    margin: 1em 20px 1em 10px;
+    transition: 0.4s;
+    top: 0.9em;
+  }
+
+  header {
+    width: 375px;
+    height: 100px;
+  }
+
+  header.hscroll {
+    height: 70px;
+  }
+
+  header h1 {
+    display: inline;
+    position: absolute;
+    top: 0.6em;
+    font-size: 30px;
+  }
+
+  header nav {
+    position: absolute;
+    top: 5em;
+    right: 0;
+    height: auto;
+    width: 100%;
+    z-index: 9999;
+    overflow: auto;
+  }
+
+  header nav ul {
+    height: auto;
+    display: block;
+    text-align: right;
+  }
+
+  li a {
+    font-size: 15px;
+  }
+
+  #menu-check:not(:checked) ~ nav {
+    display: none;
+  }
+
+  #menu-check:checked ~ nav {
+    display: block;
+  }
+  #menu-check:checked ~ label #menu-abrir {
+    display: none;
+  }
+  #menu-check:checked ~ label #menu-cerrar {
+    display: block;
+  }
+  #menu {
+    display: block;
+    color: var(--color1);
+    background-color: var(--bgcolor1);
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 3px solid var(--color1);
+    border-radius: 0.3em;
+    position: absolute;
+    background-color: white;
+    padding: 3px;
+    top: 1em;
+    right: 1em;
+  }
+  #menu:hover {
+    color: white;
+    background-color: black;
+    cursor: pointer;
+  }
+  #menu-cerrar {
+    display: none;
+  }
+  main {
+    margin: 101px 0 10px 0;
+  }
+
+  .grid-container {
+    grid-template-columns: none;
+    width: 300px;
+    padding: 0;
+  }
+  .grid-item {
+    width: 300px;
+  }
+  .grid-item h1 {
+    width: 100%;
+    font-size: 1em;
+  }
+  .grid-item h2 {
+    font-size: 0.5em;
+  }
+  .grid-item img {
+    width: 250px;
+  }
+
+  #final-Content {
+    width: 300px;
+  }
+
+  p {
+    font-size: 0.6em;
+  }
+
+  h2 {
+    width: 90%;
+    font-size: 1.6em;
+    margin: 0 auto 0 auto;
+  }
+  u {
+    display: block;
+  }
+  .slider-frame {
+    width: 300px;
+  }
+  .slider-frame ul {
+    width: 500%;
+    height: 280px;
+    overflow: visible;
+  }
+  .slider-frame li {
+    width: 100%;
+  }
+
+  .slider-frame img {
+    width: 300px;
+    height: 280px;
+  }
+
+  @keyframes slide {
+    0% {
+      margin-left: 0%;
+    }
+    25% {
+      margin-left: -310px;
+    }
+    45% {
+      margin-left: -620px;
+    }
+    65% {
+      margin-left: -930px;
+    }
+    85% {
+      margin-left: -1240px;
+    }
+  }
+
+  footer p {
+    font-size: 0.8em;
+  }
+
+  .right i {
+    font-size: 1.5em;
+  }
+
+  b {
+    font-size: 2em;
+    justify-content: center;
+  }
+
+  .btnLogin {
+    font-size: 0.7em;
+  }
+  .modal-content {
+    width: 80%;
+    margin: 4% auto 14% auto;
+  }
+  .container {
+    padding: 8px;
+  }
+  .container label {
+    font-size: 0.5em;
+  }
+  img.avatar {
+    width: 20%;
+  }
+  .imgcontainer {
+    margin: 12px 0 6px 0;
+  }
+  input {
+    width: 10px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    font-size: 0.5em;
+  }
+
+  .psw a {
+    font-size: 0.5em;
+  }
+}
